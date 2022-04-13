@@ -1,0 +1,15 @@
+
+PLAY [my test playbook] *********************************************************************************************************************************
+
+TASK [Gathering Facts] **********************************************************************************************************************************
+ok: [172.31.4.121]
+ok: [172.31.4.208]
+
+TASK [install pkg] **************************************************************************************************************************************
+fatal: [172.31.4.208]: FAILED! => {"changed": false, "changes": {"installed": ["tree"]}, "msg": "You need to be root to perform this command.\n", "rc": 1, "results": ["Loaded plugins: extras_suggestions, langpacks, priorities, update-motd\n"]}
+fatal: [172.31.4.121]: FAILED! => {"changed": false, "changes": {"installed": ["tree"]}, "msg": "You need to be root to perform this command.\n", "rc": 1, "results": ["Loaded plugins: extras_suggestions, langpacks, priorities, update-motd\n"]}
+
+PLAY RECAP **********************************************************************************************************************************************
+172.31.4.121               : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+172.31.4.208               : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+

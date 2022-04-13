@@ -1,0 +1,9 @@
+---
+- name: my test playbook
+  hosts: webservers
+  # become: true
+  tasks:
+  - name: install pkg
+    yum:
+      name: tree
+      state: installed

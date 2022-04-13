@@ -1,0 +1,11 @@
+---
+- name: my tset playbook
+  hosts: all
+  become: true
+  tasks:
+    - name: add a list of users
+      user: name='{{ item }}' state=present
+      with_items:
+        - max
+        - sumit
+        - roy
